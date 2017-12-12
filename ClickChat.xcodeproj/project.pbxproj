@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537E85CC9C34550560BF45A7 /* Pods_ClickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02207BBA5ABFCC380DC0843A /* Pods_ClickChat.framework */; };
 		840F71D31FDF2B9800659A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F71D21FDF2B9800659A62 /* AppDelegate.swift */; };
-		840F71D51FDF2B9800659A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F71D41FDF2B9800659A62 /* ViewController.swift */; };
+		840F71D51FDF2B9800659A62 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F71D41FDF2B9800659A62 /* AuthViewController.swift */; };
 		840F71D81FDF2B9800659A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840F71D61FDF2B9800659A62 /* Main.storyboard */; };
 		840F71DA1FDF2B9800659A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840F71D91FDF2B9800659A62 /* Assets.xcassets */; };
 		840F71DD1FDF2B9800659A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840F71DB1FDF2B9800659A62 /* LaunchScreen.storyboard */; };
+		840F71E51FDF2BBB00659A62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840F71E41FDF2BBB00659A62 /* GoogleService-Info.plist */; };
+		840F71E61FDF2BCD00659A62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840F71DE1FDF2B9800659A62 /* Info.plist */; };
+		841491281FDF98AE00B02653 /* ClicksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841491271FDF98AE00B02653 /* ClicksTableViewController.swift */; };
+		8414912C1FDF9E7000B02653 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414912B1FDF9E7000B02653 /* AddImageViewController.swift */; };
+		8414912E1FE0800400B02653 /* SelectUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02207BBA5ABFCC380DC0843A /* Pods_ClickChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0F2F27BF950B471620881E /* Pods-ClickChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickChat/Pods-ClickChat.release.xcconfig"; sourceTree = "<group>"; };
 		840F71CF1FDF2B9800659A62 /* ClickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840F71D21FDF2B9800659A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		840F71D41FDF2B9800659A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		840F71D41FDF2B9800659A62 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		840F71D71FDF2B9800659A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840F71D91FDF2B9800659A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840F71DC1FDF2B9800659A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840F71DE1FDF2B9800659A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840F71E41FDF2BBB00659A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		841491271FDF98AE00B02653 /* ClicksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClicksTableViewController.swift; sourceTree = "<group>"; };
+		8414912B1FDF9E7000B02653 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
+		8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserTableViewController.swift; sourceTree = "<group>"; };
+		95C099649B3DEDA477A3D809 /* Pods-ClickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClickChat/Pods-ClickChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537E85CC9C34550560BF45A7 /* Pods_ClickChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,8 @@
 			children = (
 				840F71D11FDF2B9800659A62 /* ClickChat */,
 				840F71D01FDF2B9800659A62 /* Products */,
+				FC0B00AD7A92D0D1511DD707 /* Pods */,
+				F657E1E2E0F03FCF950A9EC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +71,34 @@
 			isa = PBXGroup;
 			children = (
 				840F71D21FDF2B9800659A62 /* AppDelegate.swift */,
-				840F71D41FDF2B9800659A62 /* ViewController.swift */,
+				840F71D41FDF2B9800659A62 /* AuthViewController.swift */,
 				840F71D61FDF2B9800659A62 /* Main.storyboard */,
+				8414912B1FDF9E7000B02653 /* AddImageViewController.swift */,
+				8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */,
+				841491271FDF98AE00B02653 /* ClicksTableViewController.swift */,
+				840F71E41FDF2BBB00659A62 /* GoogleService-Info.plist */,
 				840F71D91FDF2B9800659A62 /* Assets.xcassets */,
 				840F71DB1FDF2B9800659A62 /* LaunchScreen.storyboard */,
 				840F71DE1FDF2B9800659A62 /* Info.plist */,
 			);
 			path = ClickChat;
+			sourceTree = "<group>";
+		};
+		F657E1E2E0F03FCF950A9EC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02207BBA5ABFCC380DC0843A /* Pods_ClickChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC0B00AD7A92D0D1511DD707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95C099649B3DEDA477A3D809 /* Pods-ClickChat.debug.xcconfig */,
+				5B0F2F27BF950B471620881E /* Pods-ClickChat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840F71E11FDF2B9800659A62 /* Build configuration list for PBXNativeTarget "ClickChat" */;
 			buildPhases = (
+				AA7A9C44C5BDA95F6141E466 /* [CP] Check Pods Manifest.lock */,
 				840F71CB1FDF2B9800659A62 /* Sources */,
 				840F71CC1FDF2B9800659A62 /* Frameworks */,
 				840F71CD1FDF2B9800659A62 /* Resources */,
+				5D162F3B1E905133BDE1CD98 /* [CP] Embed Pods Frameworks */,
+				9626E1AE74DB8B65D9823E80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,19 +164,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				840F71DD1FDF2B9800659A62 /* LaunchScreen.storyboard in Resources */,
+				840F71E51FDF2BBB00659A62 /* GoogleService-Info.plist in Resources */,
 				840F71DA1FDF2B9800659A62 /* Assets.xcassets in Resources */,
+				840F71E61FDF2BCD00659A62 /* Info.plist in Resources */,
 				840F71D81FDF2B9800659A62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D162F3B1E905133BDE1CD98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClickChat/Pods-ClickChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9626E1AE74DB8B65D9823E80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClickChat/Pods-ClickChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7A9C44C5BDA95F6141E466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		840F71CB1FDF2B9800659A62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840F71D51FDF2B9800659A62 /* ViewController.swift in Sources */,
+				841491281FDF98AE00B02653 /* ClicksTableViewController.swift in Sources */,
+				8414912E1FE0800400B02653 /* SelectUserTableViewController.swift in Sources */,
+				840F71D51FDF2B9800659A62 /* AuthViewController.swift in Sources */,
+				8414912C1FDF9E7000B02653 /* AddImageViewController.swift in Sources */,
 				840F71D31FDF2B9800659A62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +365,7 @@
 		};
 		840F71E21FDF2B9800659A62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C099649B3DEDA477A3D809 /* Pods-ClickChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		840F71E31FDF2B9800659A62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0F2F27BF950B471620881E /* Pods-ClickChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
