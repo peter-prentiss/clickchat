@@ -14,6 +14,9 @@ class AddImageViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var imageName = "\(NSUUID().uuidString).jpeg"
+    var imageURL = ""
+    
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -33,10 +36,8 @@ class AddImageViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
-        } else {
-            print("Found nil object")
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = selectedImage
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -47,15 +48,29 @@ class AddImageViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if let image = imageView.image {
             if let imageData = UIImageJPEGRepresentation(image, 0.1) {
-                imageFolder.child("myPic.jpeg").putData(imageData, metadata: nil, completion: { (metadata, error) in
+                imageFolder.child(imageName).putData(imageData, metadata: nil, completion: { (metadata, error) in
                     if let error = error {
                         print(error)
                     } else {
-                        print("Upload Complete")
-                        self.performSegue(withIdentifier: "addImageToSelectUser", sender: nil)
+                        if let imageURL = metadata?.downloadURL()?.absoluteString {
+                            self.imageURL = imageURL
+                            self.performSegue(withIdentifier: "addImageToSelectUser", sender: nil)
+                        }
+                        
                     }
                 })
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectTVC = segue.destination as? SelectUserTableViewController {
+            selectTVC.imageURL = imageURL
+            selectTVC.imageName = imageName
+            if let message = descriptionTextField.text {
+                selectTVC.message = message
+            }
+            
         }
     }
 }

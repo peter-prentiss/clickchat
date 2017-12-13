@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mdp-rC-nCj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier2" id="mdp-rC-nCj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mdp-rC-nCj" id="bDw-EA-FAt">
@@ -127,10 +127,54 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="gQ1-27-aSD" kind="show" identifier="clicksToView" id="ip6-tv-C4y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBG-X1-MuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807" y="51"/>
+        </scene>
+        <!--View Click View Controller-->
+        <scene sceneID="cbK-vf-3Tj">
+            <objects>
+                <viewController id="gQ1-27-aSD" customClass="ViewClickViewController" customModule="ClickChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S92-Hf-Nnc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-YS-zsq">
+                                <rect key="frame" x="12" y="634" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IBd-hZ-grM">
+                                <rect key="frame" x="12" y="76" width="351" height="546"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IBd-hZ-grM" firstAttribute="centerX" secondItem="S92-Hf-Nnc" secondAttribute="centerX" id="0vI-5e-Qo3"/>
+                            <constraint firstItem="4Bh-YS-zsq" firstAttribute="leading" secondItem="v1B-dr-hHa" secondAttribute="leading" constant="12" id="1ns-QI-jnv"/>
+                            <constraint firstItem="v1B-dr-hHa" firstAttribute="trailing" secondItem="IBd-hZ-grM" secondAttribute="trailing" constant="12" id="RkC-cH-PaD"/>
+                            <constraint firstItem="IBd-hZ-grM" firstAttribute="leading" secondItem="v1B-dr-hHa" secondAttribute="leading" constant="12" id="Wqc-fz-rUt"/>
+                            <constraint firstItem="IBd-hZ-grM" firstAttribute="top" secondItem="v1B-dr-hHa" secondAttribute="top" constant="12" id="cFW-g5-FF7"/>
+                            <constraint firstItem="v1B-dr-hHa" firstAttribute="bottom" secondItem="4Bh-YS-zsq" secondAttribute="bottom" constant="12" id="kUW-hg-7Wz"/>
+                            <constraint firstItem="v1B-dr-hHa" firstAttribute="trailing" secondItem="4Bh-YS-zsq" secondAttribute="trailing" constant="12" id="nbU-uP-4Y2"/>
+                            <constraint firstItem="4Bh-YS-zsq" firstAttribute="top" secondItem="IBd-hZ-grM" secondAttribute="bottom" constant="12" id="nxk-7Q-oGW"/>
+                            <constraint firstItem="4Bh-YS-zsq" firstAttribute="centerX" secondItem="S92-Hf-Nnc" secondAttribute="centerX" id="sq4-dn-ZhU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v1B-dr-hHa"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="IBd-hZ-grM" id="ryI-Ti-996"/>
+                        <outlet property="messageLabel" destination="4Bh-YS-zsq" id="k9e-qU-UWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TF-HK-aLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="771"/>
         </scene>
         <!--Add an Image-->
         <scene sceneID="4rT-sY-XQO">
@@ -184,7 +228,7 @@
                             </barButtonItem>
                             <barButtonItem systemItem="organize" id="ELd-z0-E9P">
                                 <connections>
-                                    <action selector="photosTapped:" destination="x7b-Cw-atq" id="9W9-yl-6eY"/>
+                                    <action selector="photosTapped:" destination="x7b-Cw-atq" id="NhL-0K-j2r"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

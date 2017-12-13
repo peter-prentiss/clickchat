@@ -18,6 +18,7 @@
 		841491281FDF98AE00B02653 /* ClicksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841491271FDF98AE00B02653 /* ClicksTableViewController.swift */; };
 		8414912C1FDF9E7000B02653 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414912B1FDF9E7000B02653 /* AddImageViewController.swift */; };
 		8414912E1FE0800400B02653 /* SelectUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */; };
+		841491301FE0E62100B02653 /* ViewClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414912F1FE0E62100B02653 /* ViewClickViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		841491271FDF98AE00B02653 /* ClicksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClicksTableViewController.swift; sourceTree = "<group>"; };
 		8414912B1FDF9E7000B02653 /* AddImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserTableViewController.swift; sourceTree = "<group>"; };
+		8414912F1FE0E62100B02653 /* ViewClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClickViewController.swift; sourceTree = "<group>"; };
 		95C099649B3DEDA477A3D809 /* Pods-ClickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClickChat/Pods-ClickChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,10 +74,11 @@
 			children = (
 				840F71D21FDF2B9800659A62 /* AppDelegate.swift */,
 				840F71D41FDF2B9800659A62 /* AuthViewController.swift */,
-				840F71D61FDF2B9800659A62 /* Main.storyboard */,
 				8414912B1FDF9E7000B02653 /* AddImageViewController.swift */,
 				8414912D1FE0800400B02653 /* SelectUserTableViewController.swift */,
 				841491271FDF98AE00B02653 /* ClicksTableViewController.swift */,
+				8414912F1FE0E62100B02653 /* ViewClickViewController.swift */,
+				840F71D61FDF2B9800659A62 /* Main.storyboard */,
 				840F71E41FDF2BBB00659A62 /* GoogleService-Info.plist */,
 				840F71D91FDF2B9800659A62 /* Assets.xcassets */,
 				840F71DB1FDF2B9800659A62 /* LaunchScreen.storyboard */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841491301FE0E62100B02653 /* ViewClickViewController.swift in Sources */,
 				841491281FDF98AE00B02653 /* ClicksTableViewController.swift in Sources */,
 				8414912E1FE0800400B02653 /* SelectUserTableViewController.swift in Sources */,
 				840F71D51FDF2B9800659A62 /* AuthViewController.swift in Sources */,
