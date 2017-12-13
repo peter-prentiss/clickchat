@@ -18,24 +18,23 @@ class ClicksTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if let uid = Auth.auth().currentUser?.uid {
-            Database.database().reference().child("users").child(uid).child("snaps").observe(.childAdded) { (snapshot) in
+            Database.database().reference().child("users").child(uid).child("snaps").observe(.childAdded) { (clickshot) in
                 
                     
-                    self.clicks.append(snapshot)
+                    self.clicks.append(clickshot)
                     self.tableView.reloadData()
-                    /*
-                 if let clickDictionary = snapshot.value as? NSDictionary {
-                    if let from = clickDictionary["from"] as? String {
-                        if let imageName = clickDictionary["imageName"] as? String {
-                            if let imageURL = clickDictionary["imageURL"] as? String {
-                                if let message = clickDictionary["message"] as? String {
-                                    
-                                }
-                            }
+                
+                Database.database().reference().child("users").child(uid).child("snaps").observe(.childRemoved, with: { (clickshot) in
+                    
+                    var index = 0
+                    for click in self.clicks {
+                        if clickshot.key == click.key {
+                            self.clicks.remove(at: index)
                         }
+                        index += 1
                     }
-                 }
-                 */
+                    self.tableView.reloadData()
+                })
             }
         }
     }
@@ -69,6 +68,16 @@ class ClicksTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "clicksToView", sender: nil)
+        let click = clicks[indexPath.row]
+        
+        performSegue(withIdentifier: "clicksToView", sender: click)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewClickVC = segue.destination as? ViewClickViewController {
+            if let clickshot = sender as? DataSnapshot {
+                viewClickVC.clickshot = clickshot
+            }
+        }
     }
 }
